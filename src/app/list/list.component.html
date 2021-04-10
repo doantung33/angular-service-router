@@ -1,0 +1,14 @@
+<button [routerLink]="'create'">Create product</button>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Description</td>
+  </tr>
+  <tr *ngFor="let p of productList">
+    <td>{{p.name}}</td>
+    <td>{{p.description}}</td>
+    <td><a [routerLink]="'edit/'+p.id">Edit</a></td>
+    <td><a [routerLink]="'delete/'+p.id">Delete</a></td>
+  </tr>
+</table>
+
